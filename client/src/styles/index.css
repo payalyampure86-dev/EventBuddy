@@ -1,0 +1,61 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+html,
+body,
+#root{
+
+  width:100%;
+  min-height:100vh;
+  font-family:Arial, sans-serif;
+
+}
+
+
+body{
+
+  background:#f8f9ff;
+
+}
+
+
+
+.app-layout{
+
+  display:flex;
+  min-height:100vh;
+
+}
+
+
+
+.main-content{
+
+  margin-left:300px;
+
+  width:calc(100% - 300px);
+
+  padding:30px;
+
+}
+
+
+
+.full-page{
+
+  width:100%;
+
+  min-height:100vh;
+
+}
+
+
+button{
+
+  font-family:inherit;
+
+}

@@ -1,0 +1,105 @@
+.connections{
+
+    padding:30px;
+
+}
+
+
+.connections h2{
+
+    color:#1e293b;
+
+    margin-bottom:25px;
+
+}
+
+
+.connection-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+.connection-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+
+}
+
+
+.connection-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.connection-card img{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    margin-bottom:15px;
+
+}
+
+
+.connection-card h3{
+
+    color:#6C63FF;
+
+}
+
+
+.connection-card p{
+
+    color:#64748b;
+
+    margin:8px;
+
+}
+
+
+.connection-card button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#6C63FF;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+.connection-card button:hover{
+
+    background:#5548ff;
+
+}

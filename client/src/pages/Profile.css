@@ -1,0 +1,278 @@
+/* ===== Profile Layout ===== */
+
+.profile-layout{
+  min-height:100vh;
+  display:flex;
+  background:#FAF5FF;
+  font-family:"Poppins",sans-serif;
+}
+
+
+.profile-page{
+
+  margin-left:270px;
+  width:calc(100% - 270px);
+
+  padding:40px;
+
+}
+
+
+
+/* Header */
+
+.profile-header{
+
+  margin-bottom:30px;
+
+}
+
+
+.profile-header h1{
+
+  color:#1E1B4B;
+  font-size:34px;
+  margin-bottom:8px;
+
+}
+
+
+.profile-header p{
+
+  color:#666;
+
+}
+
+
+
+/* Profile Card */
+
+.profile-card{
+
+  background:#fff;
+
+  padding:35px;
+
+  border-radius:25px;
+
+  box-shadow:
+  0 12px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+/* Top Section */
+
+.profile-top{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:30px;
+
+  padding-bottom:30px;
+
+  border-bottom:1px solid #eee;
+
+}
+
+
+.profile-top img{
+
+  width:130px;
+
+  height:130px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:5px solid #6D28D9;
+
+}
+
+
+
+.profile-top h2{
+
+  color:#1E1B4B;
+
+  font-size:30px;
+
+  margin-bottom:10px;
+
+}
+
+
+
+.role{
+
+  color:#6D28D9;
+
+  font-weight:600;
+
+  margin-bottom:20px;
+
+}
+
+
+
+/* Button */
+
+.profile-top button{
+
+  padding:12px 30px;
+
+  border:none;
+
+  border-radius:30px;
+
+  background:
+  linear-gradient(
+  90deg,
+  #6D28D9,
+  #FF4D8D
+  );
+
+  color:white;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+
+.profile-top button:hover{
+
+  transform:translateY(-3px);
+
+}
+
+
+
+/* Details */
+
+.profile-details{
+
+  margin-top:30px;
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:25px;
+
+}
+
+
+
+.detail-box{
+
+  background:#FAF5FF;
+
+  padding:25px;
+
+  border-radius:18px;
+
+  transition:.3s;
+
+}
+
+
+
+.detail-box:hover{
+
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+.detail-box h3{
+
+  color:#6D28D9;
+
+  margin-bottom:10px;
+
+}
+
+
+
+.detail-box p{
+
+  color:#555;
+
+}
+
+
+
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+
+.profile-page{
+
+  margin-left:80px;
+
+  width:calc(100% - 80px);
+
+}
+
+
+.profile-top{
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+}
+
+
+.profile-details{
+
+  grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.profile-page{
+
+  padding:20px;
+
+}
+
+
+.profile-card{
+
+  padding:25px;
+
+}
+
+
+.profile-top img{
+
+  width:100px;
+  height:100px;
+
+}
+
+
+}

@@ -1,0 +1,117 @@
+.topbar {
+
+    height:80px;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.search {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#f5f5f5;
+
+    padding:10px 15px;
+
+    border-radius:25px;
+
+}
+
+
+
+.search input {
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    width:300px;
+
+    font-size:15px;
+
+}
+
+
+
+.actions {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+
+.icon {
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+
+
+.profile {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+
+.profile img {
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+}
+
+
+
+.profile h4 {
+
+    margin:0;
+
+}
+
+
+
+.profile p {
+
+    margin:0;
+
+    color:gray;
+
+    font-size:13px;
+
+}

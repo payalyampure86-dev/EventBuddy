@@ -1,0 +1,228 @@
+.settings-layout{
+  min-height:100vh;
+  display:flex;
+  background:#FAF5FF;
+  font-family:"Poppins",sans-serif;
+}
+
+
+.settings-page{
+
+  margin-left:270px;
+  width:calc(100% - 270px);
+
+  padding:40px;
+
+}
+
+
+.settings-header{
+
+  margin-bottom:30px;
+
+}
+
+
+.settings-header h1{
+
+  font-size:34px;
+  color:#1E1B4B;
+
+}
+
+
+.settings-header p{
+
+  color:#666;
+
+}
+
+
+
+/* Card */
+
+.settings-card{
+
+  background:#fff;
+
+  padding:35px;
+
+  border-radius:25px;
+
+  box-shadow:
+  0 12px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+/* Setting Box */
+
+.setting-box{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:25px;
+
+  background:#FAF5FF;
+
+  border-radius:18px;
+
+  margin-bottom:20px;
+
+  transition:.3s;
+
+}
+
+
+.setting-box:hover{
+
+  transform:translateY(-5px);
+
+}
+
+
+
+.setting-box h3{
+
+  color:#6D28D9;
+
+  margin-bottom:8px;
+
+}
+
+
+.setting-box p{
+
+  color:#666;
+
+}
+
+
+
+
+/* Buttons */
+
+.setting-box button{
+
+  padding:12px 30px;
+
+  border:none;
+
+  border-radius:25px;
+
+  background:linear-gradient(90deg,#6D28D9,#FF4D8D);
+
+  color:white;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+}
+
+
+
+/* Toggle */
+
+.toggle{
+
+  position:relative;
+
+  width:55px;
+  height:30px;
+
+}
+
+
+.toggle input{
+
+  display:none;
+
+}
+
+
+.toggle span{
+
+  position:absolute;
+
+  width:55px;
+  height:30px;
+
+  background:#ddd;
+
+  border-radius:30px;
+
+  cursor:pointer;
+
+}
+
+
+.toggle span:before{
+
+  content:"";
+
+  position:absolute;
+
+  width:24px;
+  height:24px;
+
+  background:white;
+
+  border-radius:50%;
+
+  top:3px;
+  left:3px;
+
+  transition:.3s;
+
+}
+
+
+.toggle input:checked + span{
+
+  background:#6D28D9;
+
+}
+
+
+.toggle input:checked + span:before{
+
+  transform:translateX(25px);
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.settings-page{
+
+margin-left:80px;
+width:calc(100% - 80px);
+
+}
+
+
+.setting-box{
+
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+
+}
+
+
+.setting-box button{
+
+width:100%;
+
+}
+
+}

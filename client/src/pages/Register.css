@@ -1,0 +1,192 @@
+/* ================= GOOGLE FONT ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ================= PAGE ================= */
+
+.register-page{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#FAF5FF;
+    padding:30px;
+}
+
+/* ================= CARD ================= */
+
+.register-card{
+    width:450px;
+    max-width:100%;
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(109,40,217,.18);
+}
+
+/* ================= LOGO ================= */
+
+.register-logo{
+    text-align:center;
+    font-size:40px;
+    font-weight:700;
+    color:#6D28D9;
+    margin-bottom:15px;
+}
+
+.register-logo span{
+    color:#FF4D8D;
+}
+
+.register-card h2{
+    text-align:center;
+    color:#1E1B4B;
+    margin-bottom:10px;
+    font-size:30px;
+}
+
+.register-card p{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+/* ================= ROLE ================= */
+
+.role-selector{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.role-selector button{
+    flex:1;
+    padding:14px;
+    border:2px solid #E9D5FF;
+    border-radius:15px;
+    background:#fff;
+    color:#555;
+    font-size:15px;
+    font-weight:600;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.role-selector button:hover{
+    border-color:#6D28D9;
+    color:#6D28D9;
+}
+
+.role-selector button.active{
+    background:linear-gradient(135deg,#6D28D9,#8B5CF6);
+    color:#fff;
+    border-color:#6D28D9;
+}
+
+/* ================= INPUT ================= */
+
+.register-card input{
+    width:100%;
+    padding:15px 18px;
+    border:2px solid #E9D5FF;
+    border-radius:15px;
+    margin-bottom:18px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.register-card input:focus{
+    border-color:#6D28D9;
+    box-shadow:0 0 10px rgba(109,40,217,.15);
+}
+
+/* ================= PASSWORD ================= */
+
+.password-box{
+    position:relative;
+}
+
+.password-box span{
+    position:absolute;
+    right:18px;
+    top:18px;
+    cursor:pointer;
+    color:#6D28D9;
+    font-size:18px;
+}
+
+/* ================= BUTTON ================= */
+
+.register-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(135deg,#6D28D9,#8B5CF6,#FF4D8D);
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(109,40,217,.30);
+}
+
+/* ================= LOGIN ================= */
+
+.login-text{
+    text-align:center;
+    margin-top:25px;
+    color:#666;
+}
+
+.login-text a{
+    margin-left:5px;
+    text-decoration:none;
+    color:#FF4D8D;
+    font-weight:600;
+}
+
+.login-text a:hover{
+    text-decoration:underline;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:600px){
+
+.register-card{
+    width:100%;
+    padding:30px 25px;
+}
+
+.register-logo{
+    font-size:32px;
+}
+
+.register-card h2{
+    font-size:26px;
+}
+
+.role-selector{
+    flex-direction:column;
+}
+
+}

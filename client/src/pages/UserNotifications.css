@@ -1,0 +1,85 @@
+.user-notification-layout{
+
+min-height:100vh;
+background:#faf5ff;
+
+}
+
+
+.user-notification-page{
+
+margin-left:260px;
+padding:40px;
+
+}
+
+
+.user-notification-page h1{
+
+color:#6d28d9;
+font-size:38px;
+margin-bottom:30px;
+
+}
+
+
+
+.user-notification-card{
+
+background:white;
+padding:25px;
+
+border-radius:20px;
+
+margin-bottom:20px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+
+
+.user-notification-card h3{
+
+color:#6d28d9;
+
+}
+
+
+
+.user-notification-card p{
+
+color:#475569;
+
+margin:10px 0;
+
+}
+
+
+
+.user-notification-card span{
+
+color:#94a3b8;
+
+}
+
+
+
+.user-notification-card button{
+
+float:right;
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+padding:8px 15px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}

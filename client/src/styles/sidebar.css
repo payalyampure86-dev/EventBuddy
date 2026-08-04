@@ -1,0 +1,45 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 25px 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.logo span {
+  color: #6c5ce7;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 12px;
+}
+
+.menu li a {
+  display: block;
+  text-decoration: none;
+  color: #444;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.menu li a:hover {
+  background: #6c5ce7;
+  color: white;
+}

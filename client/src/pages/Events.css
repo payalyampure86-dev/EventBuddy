@@ -1,0 +1,267 @@
+/* Main Layout */
+
+.events-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #faf5ff;
+}
+
+
+/* Events Page */
+
+.events-page {
+  flex: 1;
+  margin-left: 250px;
+  padding: 40px;
+}
+
+
+/* Header */
+
+.events-header {
+  margin-bottom: 35px;
+}
+
+
+.events-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #6d28d9;
+  margin-bottom: 10px;
+}
+
+
+.events-header p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+
+
+/* Event Grid */
+
+.event-list {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(300px,1fr));
+
+  gap: 25px;
+
+}
+
+
+
+/* Event Card */
+
+.event-card {
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,0.08);
+
+  transition: 0.3s ease;
+
+  border: 1px solid #eee;
+
+}
+
+
+
+.event-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+  0 15px 35px rgba(109,40,217,0.15);
+
+}
+
+
+
+.event-card h2 {
+
+  color:#1e1b4b;
+
+  font-size:22px;
+
+  margin-bottom:15px;
+
+}
+
+
+
+.event-card p {
+
+  color:#475569;
+
+  margin:8px 0;
+
+  line-height:1.5;
+
+}
+
+
+
+/* Buttons Area */
+
+.event-actions {
+
+  display:flex;
+
+  gap:12px;
+
+  margin-top:25px;
+
+  flex-wrap:wrap;
+
+}
+
+
+
+/* Common Button */
+
+.event-actions button {
+
+  border:none;
+
+  padding:11px 18px;
+
+  border-radius:10px;
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+
+
+/* Like Button */
+
+.like-btn {
+
+  background:#ff4d8d;
+
+}
+
+
+.like-btn:hover {
+
+  background:#e6005c;
+
+  transform:scale(1.05);
+
+}
+
+
+
+/* Register Button */
+
+.register-btn {
+
+  background:#6d28d9;
+
+}
+
+
+.register-btn:hover {
+
+  background:#5b21b6;
+
+  transform:scale(1.05);
+
+}
+
+
+
+/* Edit Button */
+
+.edit-btn {
+
+  background:#f59e0b;
+
+}
+
+
+.edit-btn:hover {
+
+  background:#d97706;
+
+  transform:scale(1.05);
+
+}
+
+
+
+/* Delete Button */
+
+.delete-btn {
+
+  background:#dc2626;
+
+}
+
+
+.delete-btn:hover {
+
+  background:#b91c1c;
+
+  transform:scale(1.05);
+
+}
+
+
+
+/* Empty Message */
+
+.event-list h2 {
+
+  text-align:center;
+
+  color:#64748b;
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:900px){
+
+
+  .events-page {
+
+    margin-left:0;
+
+    padding:20px;
+
+  }
+
+
+  .event-actions {
+
+    flex-direction:column;
+
+  }
+
+
+  .event-actions button {
+
+    width:100%;
+
+  }
+
+}

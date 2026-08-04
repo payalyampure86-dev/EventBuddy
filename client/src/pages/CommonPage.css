@@ -1,0 +1,140 @@
+.common-layout{
+
+    min-height:100vh;
+    background:#faf5ff;
+
+}
+
+
+/* Main content */
+
+.common-page{
+
+    margin-left:260px;
+    padding:40px;
+
+}
+
+
+
+/* Heading */
+
+.common-page h1{
+
+    font-size:38px;
+    color:#6d28d9;
+    margin-bottom:20px;
+
+}
+
+
+
+/* Card */
+
+.common-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    max-width:800px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+/* Card heading */
+
+.common-card h2{
+
+    color:#1e1b4b;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* Text */
+
+.common-card p{
+
+    color:#64748b;
+
+    font-size:17px;
+
+}
+
+
+
+/* Textarea */
+
+.common-card textarea{
+
+    width:100%;
+
+    height:150px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    font-size:16px;
+
+    resize:none;
+
+    outline:none;
+
+}
+
+
+
+/* Button */
+
+.common-card button{
+
+    margin-top:20px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        90deg,
+        #6d28d9,
+        #ec4899
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .common-page{
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+
+}
