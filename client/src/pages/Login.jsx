@@ -30,55 +30,47 @@ const handleChange=(e)=>{
 
 
 
-const handleLogin=async(e)=>{
+const handleLogin = async (e) => {
 
-e.preventDefault();
+  e.preventDefault();
 
-try{
+  try {
 
-const res = await axios.post(
-  "https://eventbuddy-33hc.onrender.com/api/auth/login",
-  formData
-);
+    const res = await axios.post(
+      "https://eventbuddy-33hc.onrender.com/api/auth/login",
+      formData
+    );
 
-localStorage.setItem(
-"token",
-res.data.token
-);
+    localStorage.setItem(
+      "token",
+      res.data.token
+    );
 
+    localStorage.setItem(
+      "user",
+      JSON.stringify(res.data.user)
+    );
 
-localStorage.setItem(
-"user",
-JSON.stringify(res.data.user)
-);
+    if(res.data.user.role === "admin"){
 
+      navigate("/admin-dashboard");
 
+    } else {
 
-if(res.data.user.role==="admin"){
+      navigate("/dashboard");
 
-navigate("/admin-dashboard");
+    }
 
-}
-else{
+  } catch(err) {
 
-navigate("/dashboard");
+    setError(
+      err.response?.data?.message ||
+      "Login Failed"
+    );
 
-}
-
-
-}
-catch(err){
-
-setError(
-err.response?.data?.message ||
-"Login Failed"
-);
-
-}
-
+  }
 
 };
-
 
 
 return(
