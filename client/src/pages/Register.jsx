@@ -40,7 +40,7 @@ function Register() {
     }
 
     try {
-      const res = await API.post("/auth/register", {
+      const res = await axios.post("/auth/register", {
         name: formData.name,
         email: formData.email,
         password: formData.password,

@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
 
 const registerUser = async (req, res) => {
   try {
-
+console.log("LOGIN BODY:", req.body);
     const { name, email, password, role } = req.body;
 
 
@@ -82,7 +82,7 @@ const loginUser = async (req, res) => {
 
   try {
 
-
+console.log("LOGIN BODY:", req.body);
     const { email, password, role } = req.body;
 
 
