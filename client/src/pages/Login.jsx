@@ -37,8 +37,8 @@ e.preventDefault();
 try{
 
 const res = await axios.post(
-"https://eventbuddy-33hc.onrender.com",
-formData
+  "https://eventbuddy-33hc.onrender.com/api/auth/login",
+  formData
 );
 
 localStorage.setItem(
