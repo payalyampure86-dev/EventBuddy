@@ -14,12 +14,12 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
     "https://event-buddy-green.vercel.app"
   ],
   credentials: true
 }));
-
-
 // Routes
 const authRoutes = require("./routes/authRoutes");
 const eventRoutes = require("./routes/eventRoutes");
