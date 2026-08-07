@@ -32,7 +32,7 @@ function Events() {
     try{
 
       const res = await axios.get(
-        "https://eventbuddy-33hc.onrender.com"
+        "https://eventbuddy-backend.onrender.com"
       );
 
 
@@ -94,7 +94,7 @@ const registerEvent = async (eventId) => {
     }
 
     const res = await axios.post(
-      "https://eventbuddy-33hc.onrender.com",
+      "https://eventbuddy-backend.onrender.com",
       {
         userId: user.id,
         eventId: eventId,

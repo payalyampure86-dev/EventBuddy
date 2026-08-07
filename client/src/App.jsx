@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import AdminDashboard from "./pages/AdminDashboard";
 import ManageUsers from "./pages/ManageUsers";
 import ManageEvents from "./pages/ManageEvents";
@@ -20,6 +21,7 @@ import AdminNotifications from "./pages/AdminNotifications";
 import CreateEvent from "./pages/CreateEvent";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+
 function App(){
 
 return(
@@ -28,7 +30,7 @@ return(
 <Route path="/" element={<Home/>}/>
 
 <Route path="/login" element={<Login/>}/>
-
+<Route path="/register" element={<Register/>}/>
 <Route 
 path="/admin-dashboard" 
 element={<AdminDashboard/>}

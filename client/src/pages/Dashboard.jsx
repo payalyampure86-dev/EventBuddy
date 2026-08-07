@@ -24,7 +24,7 @@ function Dashboard() {
   const fetchEvents = async () => {
     try {
       const res = await axios.get(
-        "https://eventbuddy-33hc.onrender.com"
+        "https://eventbuddy-backend.onrender.com"
       );
 
       setEvents(res.data);

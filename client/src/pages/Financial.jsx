@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import AdminSidebar from "../components/AdminSidebar";
+import React, { useEffect, useState } from "react";import AdminSidebar from "../components/AdminSidebar";
 import "./CommonPage.css";
+import API from "../api";
 
 function Financial() {
 
@@ -18,9 +17,7 @@ function Financial() {
   const loadReport = async () => {
     try {
 
-      const res = await axios.get(
-        "https://eventbuddy-33hc.onrender.com"
-      );
+    const res = await API.get("/financial");
 
       setReport(res.data);
 

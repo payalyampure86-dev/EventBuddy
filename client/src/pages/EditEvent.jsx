@@ -37,7 +37,7 @@ function EditEvent() {
     try {
 
       const res = await axios.get(
-        "https://eventbuddy-33hc.onrender.com"
+        "https://eventbuddy-backend.onrender.com"
       );
 
 

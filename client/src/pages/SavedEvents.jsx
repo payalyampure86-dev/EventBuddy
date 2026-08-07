@@ -29,7 +29,7 @@ arguments
   const removeEvent = async (eventId) => {
     try {
       await axios.delete(
-        "https://eventbuddy-33hc.onrender.com",
+        "https://eventbuddy-backend.onrender.com",
         {
           data: {
             userId: user.id,
