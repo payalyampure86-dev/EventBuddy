@@ -29,9 +29,9 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        formData
-      );
+  "https://eventbuddy-33hc.onrender.com/api/auth/login",
+  formData
+);
 
       console.log("LOGIN SUCCESS:", res.data);
 
