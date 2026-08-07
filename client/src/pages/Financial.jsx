@@ -19,7 +19,7 @@ function Financial() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/registrations/financial"
+        "https://eventbuddy-33hc.onrender.com"
       );
 
       setReport(res.data);

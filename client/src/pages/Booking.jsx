@@ -13,7 +13,7 @@ function Booking() {
   const fetchBookings = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/registrations"
+        "https://eventbuddy-33hc.onrender.com"
       );
 
       setBookings(res.data);

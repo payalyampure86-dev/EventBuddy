@@ -26,7 +26,7 @@ function CreateEvent() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/events", formData);
+      await axios.post("https://eventbuddy-33hc.onrender.com", formData);
 
       alert("✅ Event Created Successfully!");
 

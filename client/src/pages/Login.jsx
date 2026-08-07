@@ -37,7 +37,7 @@ e.preventDefault();
 try{
 
 const res = await axios.post(
-"https://eventbuddy-33hc.onrender.com/api/auth/login",
+"https://eventbuddy-33hc.onrender.com",
 formData
 );
 
