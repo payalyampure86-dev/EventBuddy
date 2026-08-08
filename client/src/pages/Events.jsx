@@ -32,11 +32,11 @@ function Events() {
     try{
 
       const res = await axios.get(
-        "https://eventbuddy-backend.onrender.com"
+       "https://eventbuddy-backend.onrender.com/api/events"
       );
 
 
-      setEvents(res.data);
+      setEvents(Array.isArray(res.data) ? res.data : []);
 
 
     }catch(error){
@@ -94,7 +94,7 @@ const registerEvent = async (eventId) => {
     }
 
     const res = await axios.post(
-      "https://eventbuddy-backend.onrender.com",
+     "https://eventbuddy-backend.onrender.com/api/registrations",
       {
         userId: user.id,
         eventId: eventId,
@@ -135,7 +135,7 @@ const registerEvent = async (eventId) => {
 
 
       await axios.delete(
-        `http://localhost:5000/api/events/${id}`
+       `https://eventbuddy-backend.onrender.com/api/events/${id}`
       );
 
 

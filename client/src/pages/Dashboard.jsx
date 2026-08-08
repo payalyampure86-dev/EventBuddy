@@ -24,10 +24,10 @@ function Dashboard() {
   const fetchEvents = async () => {
     try {
       const res = await axios.get(
-        "https://eventbuddy-backend.onrender.com"
+        "https://eventbuddy-backend.onrender.com/api/events"
       );
 
-      setEvents(res.data);
+      setEvents(Array.isArray(res.data) ? res.data : []);
     } catch (error) {
       console.log(error);
     }
@@ -37,10 +37,10 @@ function Dashboard() {
   const fetchRegistrations = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/registrations/${user.id}`
+        `https://eventbuddy-backend.onrender.com/api/registrations/${user.id}`
       );
 
-      setRegistrations(res.data);
+      setRegistrations(Array.isArray(res.data) ? res.data : []);
     } catch (error) {
       console.log(error);
     }
