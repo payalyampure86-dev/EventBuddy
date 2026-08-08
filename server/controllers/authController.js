@@ -2,114 +2,57 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-
 // =======================
 // REGISTER USER
 // =======================
 
 const registerUser = async (req, res) => {
   try {
-console.log("LOGIN BODY:", req.body);
+    console.log("REGISTER BODY:", req.body);
+
     const { name, email, password, role } = req.body;
-    // =======================
-// FIXED ADMIN LOGIN
-// =======================
 
-if (
-  role === "admin" &&
-  email === process.env.ADMIN_EMAIL &&
-  password === process.env.ADMIN_PASSWORD
-) {
-  const token = jwt.sign(
-    {
-      id: "admin",
-      role: "admin"
-    },
-    process.env.JWT_SECRET,
-    {
-      expiresIn: "7d"
-    }
-  );
-
-  return res.status(200).json({
-    message: "Admin Login Successful ✅",
-
-    token,
-
-    user: {
-      id: "admin",
-      name: "Admin",
-      email: process.env.ADMIN_EMAIL,
-      role: "admin"
-    }
-  });
-}
-
-
-    // Check existing user
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
       return res.status(400).json({
-        message: "Email already registered"
+        message: "Email already registered",
       });
     }
 
-
-    // Password hash
     const hashedPassword = await bcrypt.hash(password, 10);
 
-
-    // Create user
-  const user = await User.create({
-  name,
-  email,
-  password: hashedPassword,
-  role: role || "user"
-});
-
-
-    res.status(201).json({
-
-      message: "Registration Successful ✅",
-
-      user: {
-
-        id: user._id,
-
-        name: user.name,
-
-        email: user.email,
-
-        role: user.role
-
-      }
-
+    const user = await User.create({
+      name,
+      email,
+      password: hashedPassword,
+      role: role || "user",
     });
 
+    return res.status(201).json({
+      message: "Registration Successful ✅",
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
+    });
 
   } catch (error) {
+    console.log("REGISTER ERROR:", error);
 
-    console.log(error);
-
-    res.status(500).json({
-
+    return res.status(500).json({
       message: "Registration Failed",
-
-      error: error.message
-
+      error: error.message,
     });
-
   }
 };
-
-
-
-
 
 // =======================
 // LOGIN USER
 // =======================
+
 const loginUser = async (req, res) => {
   try {
     console.log("LOGIN BODY:", req.body);
@@ -140,9 +83,7 @@ const loginUser = async (req, res) => {
 
       return res.status(200).json({
         message: "Admin Login Successful ✅",
-
         token,
-
         user: {
           id: "admin",
           name: "Admin",
@@ -194,9 +135,7 @@ const loginUser = async (req, res) => {
 
     return res.status(200).json({
       message: "Login Successful ✅",
-
       token,
-
       user: {
         id: user._id,
         name: user.name,
@@ -213,4 +152,13 @@ const loginUser = async (req, res) => {
       error: error.message,
     });
   }
+};
+
+// =======================
+// EXPORT FUNCTIONS
+// =======================
+
+module.exports = {
+  registerUser,
+  loginUser,
 };
