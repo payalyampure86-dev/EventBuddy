@@ -12,7 +12,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://eventbuddy-frontend.onrender.com",
+  origin: [
+    "http://localhost:5173",
+    "https://eventbuddy-frontend.onrender.com"
+  ],
   credentials: true
 }));
 
